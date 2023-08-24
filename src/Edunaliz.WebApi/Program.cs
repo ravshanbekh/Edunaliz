@@ -1,4 +1,7 @@
 
+using Edunaliz.DAL.DbContexts;
+using Microsoft.EntityFrameworkCore;
+
 namespace Edunaliz.WebApi
 {
     public class Program
@@ -13,6 +16,11 @@ namespace Edunaliz.WebApi
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<AppDbContext>(option =>
+            {
+                option.UseNpgsql(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
+            });
 
             var app = builder.Build();
 
