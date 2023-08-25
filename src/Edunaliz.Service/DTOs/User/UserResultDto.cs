@@ -1,4 +1,6 @@
-﻿namespace Edunaliz.Service.DTOs.User;
+﻿using Edunaliz.Domain.Enums;
+
+namespace Edunaliz.Service.DTOs.User;
 
 public class UserResultDto
 {
@@ -7,4 +9,5 @@ public class UserResultDto
     public string LastName { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
+    public UserRole Role { get; set; }
 }

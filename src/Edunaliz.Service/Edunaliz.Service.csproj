@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Edunaliz.DAL\Edunaliz.DAL.csproj" />
+    <ProjectReference Include="..\Edunaliz.Domain\Edunaliz.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
